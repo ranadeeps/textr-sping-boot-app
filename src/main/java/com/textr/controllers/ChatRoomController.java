@@ -10,8 +10,13 @@ import java.util.UUID;
 @CrossOrigin(origins = "*")
 public class ChatRoomController {
 
+    @GetMapping("")
+    public String helloWorld() {
+        return "hello world from chat room controller";
+    }
+
     @GetMapping("/create-room")
-    public String createRoom(){
+    public String createRoom() {
         return UUID.randomUUID().toString();
     }
 }
