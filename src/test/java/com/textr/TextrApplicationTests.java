@@ -1,0 +1,13 @@
+package com.textr;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class TextrApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}
