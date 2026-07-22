@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity(name = "messages")
+@Entity(name = "chat_messages")
 @Getter
 @Setter
 public class Message {
@@ -18,7 +18,7 @@ public class Message {
     private String content;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnoreProperties("messages")
+    @JsonIgnoreProperties("char_messages")
     private ChatRoom chatRoom;
 
 }
