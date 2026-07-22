@@ -7,6 +7,10 @@ WORKDIR /app
 # Copy the built JAR file into the container (Adjust 'target/*.jar' to 'build/libs/*.jar' for Gradle)
 COPY target/*.jar app.jar
 
+COPY /var/projects/textr-backend/application.properties /config/application.properties
+
+COPY src/main/resources/db/changelog/ /app/changelog/
+
 # Inform Docker that the container listens on port 8080 at runtime
 EXPOSE 5001
 
