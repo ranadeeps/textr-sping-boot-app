@@ -7,8 +7,8 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class StompController {
 
-    @MessageMapping("/to-room/{roomId}")
-    public String handleMessage(@DestinationVariable String roomId) {
+    @MessageMapping("/default")
+    public String handleDefaultMessage(@DestinationVariable String roomId) {
         return "Welcome to room " + roomId;
     }
 }
