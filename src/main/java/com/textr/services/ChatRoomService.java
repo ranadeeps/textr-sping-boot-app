@@ -43,7 +43,6 @@ public class ChatRoomService {
         Message message = new Message();
         message.setContent(content);
         message.setChatRoom(chatRoom);
-        chatRoom.getMessages().add(message);
         return messageRepository.save(message);
     }
 
