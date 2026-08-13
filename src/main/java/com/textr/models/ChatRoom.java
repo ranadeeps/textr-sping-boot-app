@@ -29,7 +29,7 @@ public class ChatRoom {
     private Date updatedAt;
 
     @OneToMany(mappedBy = "chatRoom",cascade = CascadeType.ALL)
-    @OrderBy("created_at ASC")
+    @OrderBy("id DESC")
     private List<Message> messages = new ArrayList<>();
 
 
