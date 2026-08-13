@@ -27,8 +27,8 @@ public class MessageController {
 
     @MessageMapping("/{roomId}")
     @SendTo("/room/{roomId}")
-    public String sendMessage(@DestinationVariable String roomId, @Payload String message) {
-        chatRoomService.saveMessage(roomId, message);
+    public MessageDTO sendMessage(@DestinationVariable String roomId, @Payload MessageDTO message) {
+        chatRoomService.saveMessage(roomId, message.getContent());
         return message;
     }
 
